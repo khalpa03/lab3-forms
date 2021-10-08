@@ -45,6 +45,7 @@ namespace lab3_forms
             this.word1.Name = "word1";
             this.word1.Size = new System.Drawing.Size(224, 27);
             this.word1.TabIndex = 0;
+            this.word1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.word1_KeyPress);
             // 
             // word2
             // 
@@ -54,6 +55,7 @@ namespace lab3_forms
             this.word2.Name = "word2";
             this.word2.Size = new System.Drawing.Size(224, 27);
             this.word2.TabIndex = 1;
+            this.word2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.word2_KeyPress);
             // 
             // label1
             // 

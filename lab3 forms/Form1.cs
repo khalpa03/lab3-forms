@@ -48,5 +48,23 @@ namespace lab3_forms
             }
         }
 
+        private void word1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if ((!(e.KeyChar <= 32 || e.KeyChar >= 64)) || (!(e.KeyChar <= 91 || e.KeyChar >= 96)) || (!(e.KeyChar <= 123 || e.KeyChar >= 126)))
+            {
+                e.Handled = true;
+            }
+        }
+
+       private void word2_KeyPress(object sender, KeyPressEventArgs e)
+       {
+          char number = e.KeyChar;
+           if ((!(e.KeyChar <= 32 || e.KeyChar >= 64)) || (!(e.KeyChar <= 91 || e.KeyChar >= 96)) || (!(e.KeyChar <= 123 || e.KeyChar >= 126)))
+           {
+               e.Handled = true;
+           }
+       }
+        
     }
 }
