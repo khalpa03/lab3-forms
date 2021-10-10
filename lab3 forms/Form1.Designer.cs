@@ -30,32 +30,15 @@ namespace lab3_forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.word1 = new System.Windows.Forms.TextBox();
-            this.word2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.word1 = new System.Windows.Forms.TextBox();
+            this.word2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // word1
-            // 
-            this.word1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.word1.Location = new System.Drawing.Point(241, 31);
-            this.word1.Multiline = true;
-            this.word1.Name = "word1";
-            this.word1.Size = new System.Drawing.Size(224, 27);
-            this.word1.TabIndex = 0;
-            this.word1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.word1_KeyPress);
-            // 
-            // word2
-            // 
-            this.word2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.word2.Location = new System.Drawing.Point(241, 75);
-            this.word2.Multiline = true;
-            this.word2.Name = "word2";
-            this.word2.Size = new System.Drawing.Size(224, 27);
-            this.word2.TabIndex = 1;
-            this.word2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.word2_KeyPress);
             // 
             // label1
             // 
@@ -80,24 +63,76 @@ namespace lab3_forms
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(12, 120);
+            this.button1.Location = new System.Drawing.Point(193, 120);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(453, 34);
+            this.button1.Size = new System.Drawing.Size(333, 34);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Определить, входит ли буквы первого слова во второе слово";
+            this.button1.Text = "Определить";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(471, 31);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(67, 27);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Очистить";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(471, 75);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(67, 27);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Очистить";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button4.Location = new System.Drawing.Point(12, 120);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(156, 34);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Показать задачу";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // word1
+            // 
+            this.word1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.word1.Location = new System.Drawing.Point(239, 29);
+            this.word1.Name = "word1";
+            this.word1.Size = new System.Drawing.Size(226, 29);
+            this.word1.TabIndex = 8;
+            this.word1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.word1_KeyDown);
+            // 
+            // word2
+            // 
+            this.word2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.word2.Location = new System.Drawing.Point(239, 74);
+            this.word2.Name = "word2";
+            this.word2.Size = new System.Drawing.Size(226, 29);
+            this.word2.TabIndex = 9;
+            this.word2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.word2_KeyDown);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 169);
+            this.ClientSize = new System.Drawing.Size(550, 169);
+            this.Controls.Add(this.word2);
+            this.Controls.Add(this.word1);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.word2);
-            this.Controls.Add(this.word1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -108,12 +143,14 @@ namespace lab3_forms
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox word1;
-        private System.Windows.Forms.TextBox word2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox word1;
+        private System.Windows.Forms.TextBox word2;
     }
 }
 
